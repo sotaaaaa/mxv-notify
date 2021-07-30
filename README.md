@@ -40,7 +40,7 @@ Message: (Lưu ý: Message phải được gửi dưới dạng `stringify`)
 
 ```data.customJson```: `Data` để phía FE dùng trong một số trường hợp đặc biệt (Gửi dưới dạng `object`)
 
-### 1.1 Publish mail đến service notify
+### 1.2 Publish mail đến service notify
 
 Channel: ```SEND_MAIL```
 
@@ -88,6 +88,24 @@ Message: (Lưu ý: Message phải được gửi dưới dạng `stringify`)
 
 ```body.replyTo```: Chỉ định mail trả lời
 
+### 1.3 Publish event đến service notify
+
+Channel: ```SEND_MESSAGE```
+
+Message: (Lưu ý: Message phải được gửi dưới dạng `stringify`)
+```js
+{
+    "receivers": ["60e2892ddf72ff0939c61c35"],
+    "event": "LOGIN",
+    "message": "Message example"
+}
+```
+
+### A. Các trường bắt buộc
+
+`receivers`: Danh sách các user nhận được event này
+`event`: Đây là `event` để `client` listen
+`message`: Nội dung `message` trả về `client`
 
 
 
