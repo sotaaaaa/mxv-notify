@@ -104,7 +104,9 @@ Message: (Lưu ý: Message phải được gửi dưới dạng `stringify`)
 ### A. Các trường bắt buộc
 
 `receivers`: Danh sách các user nhận được event này
+
 `event`: Đây là `event` để `client` listen
+
 `message`: Nội dung `message` trả về `client`
 
 
